@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SportRadarLibrary;
+﻿namespace SportRadarLibrary;
 
 public class WorldCupScoreboard
 {
@@ -84,10 +78,8 @@ public class WorldCupScoreboard
         .Select(x=> CreateReference(x))
         .ToList();
 
-
     private static MatchReference CreateReference(Match match)
     {
         return new MatchReference(match.Id, match.HomeTeam, match.AwayTeam, match.HomeTeamScore, match.AwayTeamScore);
     }
-
 }

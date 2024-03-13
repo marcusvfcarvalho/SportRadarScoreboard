@@ -44,6 +44,14 @@ Returns an ordered list of match references.
 ## **Usage**
 ```
 
-// Example usage of the WorldCupScoreboard class var scoreboard = new WorldCupScoreboard(); // Starting a match var matchReference = scoreboard.StartMatch("Home Team", "Away Team"); // Updating the score of a match scoreboard.UpdateScore(matchReference.Id, 2, 1); // Finishing a match scoreboard.FinishMatch(matchReference.Id); // Listing ongoing matches var ongoingMatches = scoreboard.ListMatches();
-
+// Example usage of the WorldCupScoreboard 
+class var scoreboard = new WorldCupScoreboard(); 
+// Starting a match 
+var matchReference = scoreboard.StartMatch("Home Team", "Away Team"); 
+// Updating the score of a match 
+scoreboard.UpdateScore(matchReference.Id, 2, 1); 
+// Finishing a match 
+scoreboard.FinishMatch(matchReference.Id); 
+// Listing ongoing matches 
+var ongoingMatches = scoreboard.ListMatches();
 ```
