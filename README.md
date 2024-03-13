@@ -5,30 +5,30 @@ This repository contains the code of a simple scoreboard class that mantains and
 The **WorldCupScoreboard** class is a component of the SportRadarLibrary namespace designed to manage and display information about ongoing World Cup matches. It provides functionality for adding, updating, finishing matches, and listing ongoing matches in a sorted order based on scores and start times.
 ## **Methods**
 ### **StartMatch**
-
+```csharp
 public MatchReference StartMatch(string homeTeam, string awayTeam, int homeScore = 0, int awayScore = 0) 
-
+```
 Adds a new match to the scoreboard with the provided home and away teams, and optionally their scores.
 
 Returns a reference to the created match.
 ### **UpdateScore**
-```
-
+```csharp
 public MatchReference UpdateScore(Guid matchId, int homeScore, int awayScore) 
-
 ```
+
 Updates the score of an ongoing match identified by the provided match ID.
 
 Returns a reference to the updated match.
 
 Throws an exception if the match is not found.
 ### **FinishMatch**
-```
+```csharp
 public void FinishMatch(Guid matchId) 
 ```
+
 Marks a match as finished and removes it from the scoreboard based on the provided match ID.
 ### **ListMatches**
-```
+```csharp
 public List<MatchReference> ListMatches() 
 
 ```
@@ -41,7 +41,7 @@ Returns an ordered list of match references.
 ### **Private Methods**
 **CreateReference**: Creates a match reference object from a given match instance.
 ## **Usage**
-```
+```csharp
 
 // Example usage of the WorldCupScoreboard 
 class var scoreboard = new WorldCupScoreboard(); 
