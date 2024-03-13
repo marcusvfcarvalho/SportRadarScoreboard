@@ -13,26 +13,26 @@ Adds a new match to the scoreboard with the provided home and away teams, and op
 
 Returns a reference to the created match.
 ### **UpdateScore**
-csharp![ref1]Copy code
+```
 
 public MatchReference UpdateScore(Guid matchId, int homeScore, int awayScore) 
 
+```
 Updates the score of an ongoing match identified by the provided match ID.
 
 Returns a reference to the updated match.
 
 Throws an exception if the match is not found.
 ### **FinishMatch**
-csharp![ref1]Copy code
-
+```
 public void FinishMatch(Guid matchId) 
-
+```
 Marks a match as finished and removes it from the scoreboard based on the provided match ID.
 ### **ListMatches**
-csharp![ref1]Copy code
-
+```
 public List<MatchReference> ListMatches() 
 
+```
 Lists all ongoing matches ordered by the highest score and time of start.
 
 Returns an ordered list of match references.
@@ -42,8 +42,8 @@ Returns an ordered list of match references.
 ### **Private Methods**
 **CreateReference**: Creates a match reference object from a given match instance.
 ## **Usage**
-csharp![ref1]Copy code
+```
 
 // Example usage of the WorldCupScoreboard class var scoreboard = new WorldCupScoreboard(); // Starting a match var matchReference = scoreboard.StartMatch("Home Team", "Away Team"); // Updating the score of a match scoreboard.UpdateScore(matchReference.Id, 2, 1); // Finishing a match scoreboard.FinishMatch(matchReference.Id); // Listing ongoing matches var ongoingMatches = scoreboard.ListMatches();
 
-[ref1]: Aspose.Words.a0edbec7-95ae-4bbf-bfc2-d6b9fad71d5a.001.png
+```
